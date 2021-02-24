@@ -19,7 +19,7 @@ while(i < files):
 		code, otp = subprocess.getstatusoutput('openamp-connector -de /usr/bin/hw.mpy -f')	
 		norm = True 
 
-		sleep(0.5)
+		time.sleep(0.5)
 
 		for j in range(1000):
 			strToFind = "%s\n%d\n" % ("Hello world! Hello world! Demo.", j)
