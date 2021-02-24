@@ -4,7 +4,7 @@ import time
 
 errors = open("errorlog.txt", "w")
 
-files = 1
+files = 10
 callsForEachFile = 50
 
 i = 0
