@@ -7,7 +7,7 @@ files = 1
 callsForEachFile = 50
 
 i = 0
-while(files < 1):
+while(i < files):
 	logName = "log"
 	logName = '%s%d' % (logName, i);
 	logName += ".txt"
