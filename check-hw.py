@@ -3,21 +3,25 @@ import datetime
 
 errors = open("errorlog.txt", "w")
 
+files = 1
+callsForEachFile = 50
+
 i = 0
-while(i < 1000):
+while(files < 1):
 	logName = "log"
 	logName = '%s%d' % (logName, i);
 	logName += ".txt"
 
 	log = open(logName, "w")	
 
-	for x in range(1000):
+	for x in range(callsForEachFile):
 		code, otp = subprocess.getstatusoutput('openamp-connector -de /usr/bin/hw.mpy -f')	
 		norm = True 
 
+		sleep(0.5)
+
 		for j in range(1000):
-			strToFind = "%s\n%d\n" % ("Hello world! Hello world! Demo.", j
-)
+			strToFind = "%s\n%d\n" % ("Hello world! Hello world! Demo.", j)
 			if strToFind not in otp:
 				norm = False
 				break
@@ -30,7 +34,7 @@ while(i < 1000):
 			log.write("\n")
 		else:
 			str = "Not ok: "
-			str += datetime.datetime.now().strftime("%d %m, %H:%M:%S.")
+			str += datetime.datetime.now().strftime("%d %m, %H:%M:%S.")мш сру
 
 			log.write(str)
 			log.write("\n")
