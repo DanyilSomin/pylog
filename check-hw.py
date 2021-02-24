@@ -34,7 +34,7 @@ while(files < 1):
 			log.write("\n")
 		else:
 			str = "Not ok: "
-			str += datetime.datetime.now().strftime("%d %m, %H:%M:%S.")мш сру
+			str += datetime.datetime.now().strftime("%d %m, %H:%M:%S.")
 
 			log.write(str)
 			log.write("\n")
