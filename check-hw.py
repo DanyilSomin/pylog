@@ -4,8 +4,13 @@ import time
 
 errors = open("errorlog.txt", "w")
 
-files = 10
-callsForEachFile = 50
+# Work time depends on calls amount
+# calls = files * callsForEachFile
+# 500 calls   - 9m (aprox.)
+# 61000 calls - 1100m (aprox.)
+
+files = 100
+callsForEachFile = 610
 
 i = 0
 while(i < files):
