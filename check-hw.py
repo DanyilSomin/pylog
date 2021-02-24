@@ -1,5 +1,6 @@
 import subprocess
 import datetime
+import time
 
 errors = open("errorlog.txt", "w")
 
