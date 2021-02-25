@@ -9,8 +9,8 @@ errors = open("errorlog.txt", "w")
 # 500 calls   - 9m (aprox.)
 # 61000 calls - 1100m (aprox.)
 
-files = 100
-callsForEachFile = 610
+files = 1000
+callsForEachFile = 61
 
 i = 0
 while(i < files):
