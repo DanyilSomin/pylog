@@ -4,13 +4,8 @@ import time
 
 errors = open("errorlog.txt", "w")
 
-# Work time depends on calls amount
-# calls = files * callsForEachFile
-# 500 calls   - 9m (aprox.)
-# 61000 calls - 1100m (aprox.)
-
-files = 1000
-callsForEachFile = 61
+files = 1000 
+callsForEachFile = 100 
 
 i = 0
 while(i < files):
@@ -24,7 +19,7 @@ while(i < files):
 		code, otp = subprocess.getstatusoutput('openamp-connector -de /usr/bin/hw.mpy -f')	
 		norm = True 
 
-		time.sleep(0.5)
+		#time.sleep(0.5)
 
 		for j in range(1000):
 			strToFind = "%s\n%d\n" % ("Hello world! Hello world! Demo.", j)
